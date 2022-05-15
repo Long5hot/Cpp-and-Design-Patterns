@@ -1,0 +1,1 @@
+//Friend class is a class where member funciton of one class can access private data of another class
