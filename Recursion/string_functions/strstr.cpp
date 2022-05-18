@@ -7,7 +7,6 @@ char * my_strstr(char *,char *);
 int main() {
     char my_string[100];
     cout << "Enter your main string" << endl;
-
     cin.getline(my_string,100);
 
     cout << "Enter the substring" << endl;
@@ -19,9 +18,11 @@ int main() {
         cout << "Its NULL" << endl;
     else
         cout << result << endl;
-
+    
 }
-char * my_strstr(char *my_string,char *sub_string) {
+
+
+char * my_strstr(char *my_string, char *sub_string) {
     if(*my_string == '\0')
         return NULL;
     if((*my_string)==(*sub_string)) {
@@ -33,11 +34,10 @@ char * my_strstr(char *my_string,char *sub_string) {
         if(*(sub_string+i)=='\0')
             return my_string;
         else 
-            my_strstr(my_string+1,sub_string);        
+            return my_strstr(my_string+1,sub_string);        
     }
     else {
         return my_strstr(my_string+1,sub_string);
     }
-    
 }
 
