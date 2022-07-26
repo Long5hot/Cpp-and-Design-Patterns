@@ -1,4 +1,5 @@
 #include<iostream>
+#include<unistd.h>
 using namespace std;
 int main()
 {
@@ -6,5 +7,11 @@ int main()
     {
        printf("1 ");
     }
-    while(1);
+    cout << endl;
+    while(1){
+        cout << "Hello world" << endl;
+        usleep(100000);
+    }
+    //while(1);
+
 }
