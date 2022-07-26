@@ -1,0 +1,51 @@
+voidmain ()
+{
+  int D.52277;
+
+  {
+    int x;
+    int & rv;
+
+    try
+      {
+        rv = &x;
+      }
+    finally
+      {
+        x = {CLOBBER(eol)};
+      }
+  }
+  D.52277 = 0;
+  return D.52277;
+}
+
+
+ __static_initialization_and_destruction_0 (int __initialize_p, int __priority)
+{
+  if (__initialize_p == 1) goto <D.52279>; else goto <D.52280>;
+  <D.52279>:
+  if (__priority == 65535) goto <D.52281>; else goto <D.52282>;
+  <D.52281>:
+  std::ios_base::Init::Init (&__ioinit);
+  atexit (__tcf_0);
+  goto <D.52283>;
+  <D.52282>:
+  <D.52283>:
+  goto <D.52284>;
+  <D.52280>:
+  <D.52284>:
+}
+
+
+ __tcf_0 ()
+{
+  std::ios_base::Init::~Init (&__ioinit);
+}
+
+
+ _GLOBAL__sub_I_main ()
+{
+  __static_initialization_and_destruction_0 (1, 65535);
+}
+
+

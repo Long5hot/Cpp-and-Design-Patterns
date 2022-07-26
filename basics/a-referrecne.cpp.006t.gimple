@@ -1,0 +1,66 @@
+voidmain ()
+{
+  int D.52355;
+
+  {
+    int x;
+    int & rv;
+
+    try
+      {
+        x = 10;
+        rv = &x;
+        _1 = std::operator<< <std::char_traits<char> > (&cout, "rv ");
+        _2 = *rv;
+        _3 = std::basic_ostream<char>::operator<< (_1, _2);
+        std::basic_ostream<char>::operator<< (_3, endl);
+        _4 = std::operator<< <std::char_traits<char> > (&cout, "x ");
+        x.0_5 = x;
+        _6 = std::basic_ostream<char>::operator<< (_4, x.0_5);
+        std::basic_ostream<char>::operator<< (_6, endl);
+        rv.1_7 = (long long unsigned int) rv;
+        _8 = std::basic_ostream<char>::operator<< (&cout, rv.1_7);
+        std::basic_ostream<char>::operator<< (_8, endl);
+        x.2_9 = (long long unsigned int) &x;
+        _10 = std::basic_ostream<char>::operator<< (&cout, x.2_9);
+        std::basic_ostream<char>::operator<< (_10, endl);
+      }
+    finally
+      {
+        x = {CLOBBER(eol)};
+      }
+  }
+  D.52355 = 0;
+  return D.52355;
+}
+
+
+ __static_initialization_and_destruction_0 (int __initialize_p, int __priority)
+{
+  if (__initialize_p == 1) goto <D.52365>; else goto <D.52366>;
+  <D.52365>:
+  if (__priority == 65535) goto <D.52367>; else goto <D.52368>;
+  <D.52367>:
+  std::ios_base::Init::Init (&__ioinit);
+  atexit (__tcf_0);
+  goto <D.52369>;
+  <D.52368>:
+  <D.52369>:
+  goto <D.52370>;
+  <D.52366>:
+  <D.52370>:
+}
+
+
+ __tcf_0 ()
+{
+  std::ios_base::Init::~Init (&__ioinit);
+}
+
+
+ _GLOBAL__sub_I_main ()
+{
+  __static_initialization_and_destruction_0 (1, 65535);
+}
+
+
